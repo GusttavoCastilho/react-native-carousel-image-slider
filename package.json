@@ -2,7 +2,10 @@
   "name": "react-native-carousel-slider",
   "version": "1.0.0",
   "description": "A simple and fully customizable React Native Carousel Slider component, support to IOS and Android.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npx tsc"
   },
@@ -23,7 +26,13 @@
     "url": "https://github.com/GusttavoCastilho/react-native-carousel-slider/issues"
   },
   "homepage": "https://github.com/GusttavoCastilho/react-native-carousel-slider#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "devDependencies": {
+    "@types/react": "^18.0.34",
+    "@types/react-native": "^0.71.5",
     "typescript": "^5.0.4"
   }
 }
