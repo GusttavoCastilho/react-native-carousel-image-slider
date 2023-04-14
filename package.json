@@ -4,6 +4,9 @@
   "description": "A simple and fully customizable React Native Carousel Slider component, support to IOS and Android.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "files": [
     "dist"
   ],
@@ -17,7 +20,10 @@
     "react-native-carousel",
     "react-native-carousel-slider"
   ],
-  "repository": "https://github.com/GusttavoCastilho/react-native-carousel-slider.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GusttavoCastilho/react-native-carousel-slider.git"
+  },
   "author": "gusttavocastilho <gustavocvalenciano@gmail.com> (https://github.com/GusttavoCastilho)",
   "license": "MIT",
   "bugs": {
@@ -28,6 +34,7 @@
     "react": "*",
     "react-native": "*"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.0.34",
     "@types/react-native": "^0.71.5",
