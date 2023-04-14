@@ -3,13 +3,7 @@ import {
   ImageResizeMode,
   ImageStyle,
   ViewStyle,
-  ViewToken,
 } from "react-native";
-
-type ChangeImageProps = {
-  viewableItems: ViewToken[];
-  changed: ViewToken[];
-};
 
 type ResizeMethodProps = "auto" | "resize" | "scale";
 
@@ -27,4 +21,6 @@ type CarouselProps = {
   buttonActiveOpacity?: number;
 };
 
-export { ChangeImageProps, CarouselProps };
+declare function CarouselSlider(props: CarouselProps): JSX.Element;
+
+export { CarouselSlider };

@@ -77,4 +77,6 @@ const CarouselSlider = ({
   );
 };
 
-export default CarouselSlider;
+export {
+  CarouselSlider
+}
