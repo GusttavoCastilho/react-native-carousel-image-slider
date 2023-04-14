@@ -1,5 +1,5 @@
 {
-  "name": "react-native-carousel-slider",
+  "name": "react-native-carousel-image-slider",
   "version": "1.0.0",
   "description": "A simple and fully customizable React Native Carousel Slider component, support to IOS and Android.",
   "main": "dist/index.js",
