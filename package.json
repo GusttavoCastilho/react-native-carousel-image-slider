@@ -18,18 +18,19 @@
     "slider",
     "carousel",
     "react-native-carousel",
-    "react-native-carousel-slider"
+    "react-native-carousel-slider",
+    "react-native-carousel-image-slider"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GusttavoCastilho/react-native-carousel-slider.git"
+    "url": "git+https://github.com/GusttavoCastilho/react-native-carousel-image-slider.git"
   },
   "author": "gusttavocastilho <gustavocvalenciano@gmail.com> (https://github.com/GusttavoCastilho)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GusttavoCastilho/react-native-carousel-slider/issues"
+    "url": "https://github.com/GusttavoCastilho/react-native-carousel-image-slider/issues"
   },
-  "homepage": "https://github.com/GusttavoCastilho/react-native-carousel-slider#readme",
+  "homepage": "https://github.com/GusttavoCastilho/react-native-carousel-image-slider#readme",
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
