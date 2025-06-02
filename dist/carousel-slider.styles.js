@@ -1,5 +1,7 @@
 import { Dimensions, StyleSheet } from "react-native";
 
+const { width: screenWidth } = Dimensions.get("window");
+
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -12,13 +14,14 @@ export const styles = StyleSheet.create({
     height: 200,
   },
   imageWrapper: {
-    width: Dimensions.get("window").width,
+    width: screenWidth,
     justifyContent: "center",
     alignItems: "center",
   },
   image: {
-    width: 180,
+    width: screenWidth,
     height: 180,
+    aspectRatio: 1,
   },
   imagesIndexes: {
     flexDirection: "row",
