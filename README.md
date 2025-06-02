@@ -1,4 +1,5 @@
-<h1 align="center">React Native Carousel Image Slider</h1>
+# React Native Carousel Image Slider
+
 A simple and fully customizable React Native Carousel Slider component, support to IOS and Android.
 
 <br>
@@ -23,6 +24,11 @@ A simple and fully customizable React Native Carousel Slider component, support 
 </p>
 
 <br>
+
+## Requirements
+
+- React Native >= 0.72.0
+- React >= 18.0.0
 
 ## Installation
 
@@ -81,19 +87,87 @@ export default function App() {
 }
 ```
 
+## Advanced Usage
+
+### Using Local Images
+
+```jsx
+import React from "react";
+import { View } from "react-native";
+import { CarouselSlider } from "react-native-carousel-image-slider";
+
+export default function App() {
+  const images = [
+    require('./assets/image1.jpg'),
+    require('./assets/image2.jpg'),
+    require('./assets/image3.jpg'),
+  ];
+
+  return (
+    <View style={{ width: "100%", flex: 1, padding: 24 }}>
+      <CarouselSlider images={images} />
+    </View>
+  );
+}
+```
+
+### Using Custom Image Component
+
+```jsx
+import React from "react";
+import { View, Image } from "react-native";
+import { CarouselSlider } from "react-native-carousel-image-slider";
+
+export default function App() {
+  const images = [
+    { uri: 'https://example.com/image1.jpg', title: 'Image 1' },
+    { uri: 'https://example.com/image2.jpg', title: 'Image 2' },
+  ];
+
+  const CustomImage = (item, index) => (
+    <View>
+      <Image source={{ uri: item.uri }} style={{ width: 300, height: 200 }} />
+      <Text>{item.title}</Text>
+    </View>
+  );
+
+  return (
+    <View style={{ width: "100%", flex: 1, padding: 24 }}>
+      <CarouselSlider 
+        images={images}
+        customImageComponent={CustomImage}
+        autoPlay={true}
+        autoPlayInterval={2000}
+      />
+    </View>
+  );
+}
+```
+
 ## Props
 
-- `images:` string[];
-- `renderDots?:` boolean;
-- `onImagePress?:` ((event: GestureResponderEvent) => void) | undefined;
-- `activeDotColor?:` string;
-- `inactiveDotColor?:` string;
-- `dotStyle?:` ViewStyle;
-- `resizeMethod?:` "auto" | "resize" | "scale";
-- `resizeMode?:` ImageResizeMode;
-- `imageStyle?:` ImageStyle;
-- `disabledOnPress?:` boolean;
-- `buttonActiveOpacity?:` number;
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `images` | Array | required | Array of image sources (URL strings or require() objects) |
+| `renderDots` | boolean | true | Whether to show pagination dots |
+| `onImagePress` | function | undefined | Callback when an image is pressed |
+| `activeDotColor` | string | 'red' | Color of the active dot |
+| `inactiveDotColor` | string | 'gray' | Color of inactive dots |
+| `dotStyle` | ViewStyle | undefined | Custom style for dots |
+| `dotSize` | number | 8 | Size of the dots |
+| `dotSpacing` | number | 4 | Spacing between dots |
+| `resizeMethod` | 'auto' \| 'resize' \| 'scale' | 'auto' | Image resize method |
+| `resizeMode` | ImageResizeMode | 'cover' | Image resize mode |
+| `imageStyle` | ImageStyle | undefined | Custom style for images |
+| `disabledOnPress` | boolean | false | Disable image press |
+| `buttonActiveOpacity` | number | 1 | Opacity when pressing images |
+| `autoPlay` | boolean | false | Enable auto-play |
+| `autoPlayInterval` | number | 3000 | Interval between auto-play slides (ms) |
+| `loop` | boolean | true | Enable infinite loop |
+| `customImageComponent` | function | undefined | Custom component to render images |
+| `containerStyle` | ViewStyle | undefined | Custom style for the container |
+| `imageContainerStyle` | ViewStyle | undefined | Custom style for the image container |
+| `dotsContainerStyle` | ViewStyle | undefined | Custom style for the dots container |
 
 ## Contributing
 
