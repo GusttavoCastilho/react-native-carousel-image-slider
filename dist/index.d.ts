@@ -3,6 +3,9 @@ import {
   ImageResizeMode,
   ImageStyle,
   ViewStyle,
+  TextStyle,
+  NativeSyntheticEvent,
+  NativeScrollEvent,
 } from "react-native";
 
 type ResizeMethodProps = "auto" | "resize" | "scale";
@@ -28,6 +31,33 @@ type CarouselProps = {
   containerStyle?: ViewStyle;
   imageContainerStyle?: ViewStyle;
   dotsContainerStyle?: ViewStyle;
+  showNavigationButtons?: boolean;
+  navigationButtonColor?: string;
+  navigationButtonSize?: number;
+  swipeEnabled?: boolean;
+  bounceEnabled?: boolean;
+  scrollEnabled?: boolean;
+  overlayStyle?: ViewStyle;
+  captionStyle?: ViewStyle;
+  captionTextStyle?: TextStyle;
+  loadingIndicator?: React.ReactNode;
+  errorComponent?: React.ReactNode;
+  onSlideChange?: (index: number) => void;
+  onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
+  onScrollBegin?: () => void;
+  onScrollEnd?: () => void;
+  initialIndex?: number;
+  windowSize?: number;
+  maxToRenderPerBatch?: number;
+  updateCellsBatchingPeriod?: number;
+  accessibilityLabel?: string;
+  accessibilityHint?: string;
+  accessibilityRole?: string;
+  aspectRatio?: number;
+  height?: number;
+  width?: number;
+  longPressEnabled?: boolean;
+  onLongPress?: () => void;
 };
 
 declare function CarouselSlider(props: CarouselProps): JSX.Element;

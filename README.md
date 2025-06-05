@@ -166,6 +166,33 @@ export default function App() {
 | `containerStyle` | ViewStyle | undefined | Custom style for the container |
 | `imageContainerStyle` | ViewStyle | undefined | Custom style for the image container |
 | `dotsContainerStyle` | ViewStyle | undefined | Custom style for the dots container |
+| `showNavigationButtons` | boolean | false | Show navigation buttons |
+| `navigationButtonColor` | string | '#fff' | Color of navigation buttons |
+| `navigationButtonSize` | number | 30 | Size of navigation buttons |
+| `swipeEnabled` | boolean | true | Enable swipe gestures |
+| `bounceEnabled` | boolean | true | Enable bounce effect |
+| `scrollEnabled` | boolean | true | Enable scroll |
+| `overlayStyle` | ViewStyle | undefined | Custom style for image overlay |
+| `captionStyle` | ViewStyle | undefined | Custom style for image caption container |
+| `captionTextStyle` | TextStyle | undefined | Custom style for caption text |
+| `loadingIndicator` | ReactNode | undefined | Custom loading indicator component |
+| `errorComponent` | ReactNode | undefined | Custom error component |
+| `onSlideChange` | function | undefined | Callback when slide changes |
+| `onScroll` | function | undefined | Callback during scroll |
+| `onScrollBegin` | function | undefined | Callback when scroll begins |
+| `onScrollEnd` | function | undefined | Callback when scroll ends |
+| `initialIndex` | number | 0 | Initial slide index |
+| `windowSize` | number | 3 | Number of slides to keep in memory |
+| `maxToRenderPerBatch` | number | 3 | Maximum number of slides to render per batch |
+| `updateCellsBatchingPeriod` | number | 50 | Period for updating cells |
+| `accessibilityLabel` | string | undefined | Accessibility label |
+| `accessibilityHint` | string | undefined | Accessibility hint |
+| `accessibilityRole` | string | 'image' | Accessibility role |
+| `aspectRatio` | number | undefined | Image aspect ratio |
+| `height` | number | undefined | Custom height for images |
+| `width` | number | undefined | Custom width for images |
+| `longPressEnabled` | boolean | false | Enable long press gesture |
+| `onLongPress` | function | undefined | Callback for long press gesture |
 
 ## 🤝 Contributing
 
