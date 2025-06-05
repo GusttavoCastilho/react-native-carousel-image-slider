@@ -19,6 +19,15 @@ type CarouselProps = {
   imageStyle?: ImageStyle;
   disabledOnPress?: boolean;
   buttonActiveOpacity?: number;
+  autoPlay?: boolean;
+  autoPlayInterval?: number;
+  loop?: boolean;
+  customImageComponent?: (item: string, index: number) => React.ReactNode;
+  dotSize?: number;
+  dotSpacing?: number;
+  containerStyle?: ViewStyle;
+  imageContainerStyle?: ViewStyle;
+  dotsContainerStyle?: ViewStyle;
 };
 
 declare function CarouselSlider(props: CarouselProps): JSX.Element;
